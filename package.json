@@ -1,0 +1,24 @@
+{
+  "name": "hel",
+  "private": true,
+  "version": "0.0.0",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "auto-bind": "^5.0.1",
+    "events": "^3.3.0",
+    "gsap": "^3.10.4",
+    "include-media": "^1.4.10",
+    "lodash": "^4.17.21",
+    "nodelist-foreach-polyfill": "^1.2.0",
+    "normalize-wheel": "^1.0.1",
+    "ogl": "^0.0.92",
+    "prefix": "^1.0.0",
+    "sass": "^1.51.0",
+    "vite": "^2.9.7",
+    "vite-plugin-glsl": "^0.1.2"
+  }
+}
