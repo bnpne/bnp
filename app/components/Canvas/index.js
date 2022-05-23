@@ -1,7 +1,7 @@
 import { Camera, Renderer, Transform, Plane } from "ogl";
 import NormalizeWheel from "normalize-wheel";
 
-import Image from "../../../assets/img/1.jpg";
+import Image from "../../../assets/img/1.webp";
 import Media from "./Media";
 import { lerp } from "../../utils/math";
 import debounce from "lodash/debounce";
@@ -11,6 +11,7 @@ export default class Canvas {
     this.url = url;
 
     this.app = document.querySelector("#app");
+    this.canvas = document.querySelector("#gl");
 
     this.scroll = {
       ease: 0.05,
@@ -19,7 +20,7 @@ export default class Canvas {
       last: 0,
     };
 
-    // this.onCheckDebounce = debounce(this.onCheck, 50);
+    // this.onCheckDebounce = debounce(this.onCheck, 200);
 
     this.createRenderer();
     this.createCamera();
@@ -42,7 +43,7 @@ export default class Canvas {
     });
     // console.log(this.renderer);
 
-    this.gl = this.renderer.gl;
+    this.canvas = this.gl = this.renderer.gl;
 
     this.app.appendChild(this.gl.canvas);
   }
@@ -59,8 +60,8 @@ export default class Canvas {
 
   createGeometry() {
     this.planeGeometry = new Plane(this.gl, {
-      heightSegments: 50,
-      widthSegments: 100,
+      heightSegments: 1,
+      widthSegments: 1,
     });
   }
 
